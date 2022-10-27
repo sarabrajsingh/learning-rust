@@ -6,8 +6,8 @@ use minigrep::Config;
 fn main() {
     let args : Vec<String> = env::args().collect();
 
-    // let query = &args[1];
-    // let filename = &args[2];
+    let query = &args[1].clone();
+    let filename = &args[2];
 
     let config = Config::new(&args).unwrap_or_else( |err| {
         eprintln!("problem parsing arguments {}", err);
